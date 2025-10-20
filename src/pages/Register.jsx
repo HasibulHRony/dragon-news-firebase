@@ -12,7 +12,7 @@ export const Register = () => {
     const photoUrl = event.target.photoUrl.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log({ name, photoUrl, email, password })
+    // console.log({ name, photoUrl, email, password })
     createUser(email, password)
     .then(res=>{
       setUser(res.user)

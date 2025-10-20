@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 export const NewsDetailsCard = ({news}) => {
-  console.log(news)
+  // console.log(news)
   return (
     <div className='p-4 bg-base-100 border rounded-sm shadow-sm'>
       <img src={news.image_url} className='w-full h-[350px] rounded-sm m-2 object-cover mx-auto'/>

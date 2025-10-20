@@ -11,11 +11,11 @@ export const Login = () => {
         event.preventDefault()
         const email = event.target.email.value;
         const password = event.target.password.value;
-        console.log({email, password})
+        // console.log({email, password})
         logIn(email, password)
         .then((res)=>{
-            console.log(res.user)
-            navigate(`${location.state ? location.state : '/'}`)
+            // console.log(res.user)
+            navigate(`${location.state  ? location.state : '/'}`)
         })
         .catch((error)=>console.log(error))
     }
