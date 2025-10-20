@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { AuthLayout } from "../layouts/AuthLayout";
+import { NewsDetails } from "../pages/NewsDetails";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ const router = createBrowserRouter([
     element: <HomeLayout></HomeLayout>,
     children: [
       {
-        path: "",
+        path: "/home",
         element: <Home></Home>,
       },
       {
@@ -37,8 +38,9 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/news",
-    element: <h2>News Layout</h2>,
+    path: "/news-details/:id",
+    element: <NewsDetails></NewsDetails>,
+    loader: () => fetch('../news.json'),
   },
   {
     path: "/*",
