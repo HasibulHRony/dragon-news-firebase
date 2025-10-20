@@ -8,7 +8,6 @@ export const NewsDetails = () => {
     const [news, setNews] = useState({})
     const data = useLoaderData()
     const { id } = useParams()
-    console.log(data, id)
     useEffect(() => {
         const newsDetails = data.find(singleNews => singleNews.id == id);
         setNews(newsDetails)
